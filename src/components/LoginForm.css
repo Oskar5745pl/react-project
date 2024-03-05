@@ -1,0 +1,128 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 90vh;
+    background: rgb(18,53,36);
+    background: linear-gradient(70deg, rgba(18,53,36,1) 4%, rgba(18,53,36,1) 43%, rgba(44,130,88,1) 100%);
+    
+}
+
+.loginForm{
+    background-color: white;
+    padding-top: 30px;
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+.titleDiv{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 12vh;
+    border-bottom-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+#pageTitle{
+    color: white;
+    padding-top: 20px;
+}
+h4.inquiry{
+    font-size: 14px;
+    color: black;
+    margin: 0;
+}
+.coolinput {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    position: static;
+    max-width: 240px;
+}
+.contact-{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.coolinput label.text {
+    font-size: 0.75rem;
+    color: #123524;
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: #ffffff;
+    width: fit-content;
+}
+button#LoginButton{
+    width: 80%;
+}
+.coolinput input.input {
+    padding: 11px 10px;
+    font-size: 0.75rem;
+    color: black;
+    border-radius: 5px;
+    background: #ffffff;
+}
+#Message.coolinput{
+    max-width: 300px;
+    height: 100px;
+}
+label{
+    color: black;
+}
+.loginHelp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    
+}
+.loginHelp > div > label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+.loginHelp .remeber_me{
+    color: #123524;
+    font-size: 1rem;
+}
+.textOnly{
+background:none;
+border:none;
+margin:0;
+padding:0;
+cursor: pointer;
+color: #123524;
+font-size: 0.9rem;
+}
+.textOnly:after{
+text-decoration: underline;
+color: #123524;
+}
+
+.newAcc{
+display: flex;
+flex-direction: row;
+padding-top: 10px;
+}
+  
+#createAcount{
+    padding-left: 5px;
+}
+h3{
+    color: black;
+}

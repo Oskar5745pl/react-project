@@ -1,0 +1,103 @@
+/* Rectangle 14 */
+
+
+#landingPage{
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+
+#homeBtn{
+
+    height: 56px;
+    width: 80vw;
+    background: #123524;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+#landingPage.container{
+    /* Rectangle 14 */
+    
+}
+@media only screen and (max-width: 1280px) {
+    #homeBtn{
+
+        height: 50px;
+        width: 260pxpx;
+        
+    }
+
+  }
+@media only screen and (max-width: 600px) {
+
+    .heading{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .heading #heroTxt{
+        width: 90vw;
+        height: 178px;
+        color: #000000;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 50px;
+        font-family: "Telex", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .subHeading{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    .subHeading p{
+        width: 90vw;
+        height: 150px;
+        color: #000000;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 50px;
+        font-family: "Telex", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .subHeading span{
+        font-size: 30px;
+        font-family: "Palanquin Dark", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #000000;
+    }
+    
+    .heading span{
+        font-size: 30px;
+        font-family: "Palanquin Dark", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #000000;
+    }
+    #homeBtn{
+        width: 300px;
+        height: 50px;
+
+    }
+    #hero-img{
+        display: none;
+    }
+
+}
