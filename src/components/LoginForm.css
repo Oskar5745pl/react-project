@@ -79,7 +79,7 @@ button#LoginButton{
     height: 100px;
 }
 label{
-    color: black;
+    color: #0f0f0f;
 }
 .loginHelp{
     display: flex;

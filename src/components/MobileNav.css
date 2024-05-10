@@ -11,8 +11,13 @@
     flex-direction: row;
     gap: 2rem;
     width: 100vw;
+    overflow-x: hidden; /* Ensure no horizontal overflow */
+    
 }
-
+.nav h1 {
+    color: #000;
+    margin-left: 22px;
+}
 
 
 #features{
@@ -24,7 +29,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-right: 20px;
+    margin-right: 22px;
 }
 .menuTgl{
     display: flex;
@@ -56,6 +61,7 @@
 .content{
     position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 150px, 0px);
     display: none;
+
 }
 
 table.jamat-time {
@@ -69,7 +75,11 @@ table.jamat-time {
     color: aliceblue;
     
 }
-
+h1 a.logo{
+    color: #000;
+    font-size: 34px;
+    font-weight: 600;
+}
 
 
 
@@ -82,6 +92,7 @@ table.jamat-time {
         align-items: start;
         justify-content: center;
         padding-bottom: 10px;
+        overflow-y: hidden; /* Ensure no horizontal overflow */
     }
     .dropdown > button{
         text-align: start;
@@ -90,7 +101,8 @@ table.jamat-time {
     }
     .dropdown{
         transition: all .3s cubic-bezier(.57,.06,.05,.95);
-        
+        overflow-y: hidden; /* Ensure no horizontal overflow */
+        overflow-x: hidden;
     }
     /* Dropdown button */
     .dropbtn {
@@ -153,6 +165,7 @@ table.jamat-time {
         padding-top: 20px;
         padding-bottom: 20px;
         border-bottom: #0f7157 solid 1px;
+        overflow-y: hidden; /* Ensure no horizontal overflow */
     }
     #accountID{
         font-size: 24px;
@@ -208,6 +221,7 @@ table.jamat-time {
       }
       ul li{
         padding-left: 24px;
+        overflow-y: hidden; /* Ensure no horizontal overflow */
       }
       .mlinks {
 
@@ -219,6 +233,9 @@ table.jamat-time {
         letter-spacing: .007em;
 
       }
+      .account{
+        overflow-y: hidden; /* Ensure no horizontal overflow */
+      }
       .menuTgl{
         background-color: transparent;
         z-index: 1100;
@@ -226,5 +243,8 @@ table.jamat-time {
       .logo img{
         height: 60px;
         padding-left: 20px;
+      }
+      .logo{
+        color: #000;
       }
     }

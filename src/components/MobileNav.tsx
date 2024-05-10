@@ -20,12 +20,54 @@ export default function MobileNav() {
     {
       name: "Products",
       links: [
-        { text: "Instant Meals", href: "#" },
-        { text: "Ready to drink Meal", href: "#" },
-        { text: "A-Z Vitamins", href: "#" },
-        { text: "Protein Snacks", href: "#" },
-        { text: "Daily Greens", href: "#" },
-        { text: "Accessories", href: "#" },
+        {
+          text: "Bestseller Bundle",
+          min_price: "$45.00",
+          href: `/products/65e848eb5e756e612b64e6f8`,
+          DB_Name: "Bestseller Bundle",
+        },
+        {
+          text: "Instant Meals",
+          min_price: "$45.00",
+          href: `/products/65e848eb5e756e612b64e6f9`,
+          DB_Name: "Instant Meals",
+        },
+        {
+          text: "Ready to drink Meal",
+          min_price: "$45.00",
+          href: `/products/65e848eb5e756e612b64e6fa`,
+          DB_Name: "Ready to drink Meal",
+        },
+        {
+          text: "Daily A-Z Vitamins",
+          min_price: "$45.00",
+          href: `/products/65e848eb5e756e612b64e6fb`,
+          DB_Name: "Daily A-Z Vitamins",
+        },
+        {
+          text: "Complete Nutrition Bar",
+          min_price: "$45.00",
+          href: `/products/65e848eb5e756e612b64e6fc`,
+          DB_Name: "Complete Nutrition Bar",
+        },
+        {
+          text: "Daily Greens",
+          min_price: "$45.00",
+          href: `/products/65e848eb5e756e612b64e6fd`,
+          DB_Name: "Daily Greens",
+        },
+        {
+          text: "Accessories",
+          min_price: "$45.00",
+          href: `/products/65e848eb5e756e612b64e6fe`,
+          DB_Name: "Accesories",
+        },
+        {
+          text: "Huel Powder",
+          min_price: "$45.00",
+          href: `/products/65e848eb5e756e612b64e6ff`,
+          DB_Name: "Huel Powder",
+        },
       ],
     },
     {
@@ -49,6 +91,7 @@ export default function MobileNav() {
   };
   const closeMenu = () => {
     setMenuOpen(false);
+    closeDropdownMeno();
   };
   const closeDropdownMeno = () => {
     setOpenDropdowns([false]);
@@ -58,16 +101,17 @@ export default function MobileNav() {
     case false:
       menuIcon = (
         <svg
-          className="svg-icon"
-          height="10"
-          width="10"
-          viewBox="0 0 10 10"
-          aria-labelledby="button-label"
-          focusable="false"
-          fill="#123524"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="black"
+          className="bi bi-list"
+          viewBox="0 0 14 14"
         >
-          <title id="button-label">Menu</title>
-          <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z" />
+          <path
+            fillRule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
         </svg>
       );
       break;
@@ -103,6 +147,7 @@ export default function MobileNav() {
 
     // Clean up the event listener on unmount
   }, [menuOpen]);
+
   return (
     <>
       {menuOpen && (
@@ -129,7 +174,11 @@ export default function MobileNav() {
                     {openDropdowns[index] && (
                       <div className="dropdown-content ">
                         {dropdown.links.map((link, linkIndex) => (
-                          <Link key={linkIndex} to={link.href}>
+                          <Link
+                            key={linkIndex}
+                            to={link.href}
+                            onClick={closeMenu}
+                          >
                             {link.text}
                           </Link>
                         ))}
@@ -205,16 +254,18 @@ export default function MobileNav() {
         </div>
       )}
       <nav id="top" className="nav">
-        <Link to={"/"} className="logo">
-          <img src="./treelogo.jpg" alt="" />
-        </Link>
+        <h1>
+          <Link to={"/"} className="logo">
+            NR
+          </Link>
+        </h1>
         <div className="navGroup">
           <Link to={"/SearchPage"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
-              fill="#123524"
+              fill="black"
               className="bi bi-search"
               viewBox="0 0 16 16"
             >
@@ -226,7 +277,7 @@ export default function MobileNav() {
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
-              fill="#123524"
+              fill="black"
               className="bi bi-cart"
               viewBox="0 0 16 16"
             >

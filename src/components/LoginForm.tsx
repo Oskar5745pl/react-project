@@ -4,7 +4,7 @@ import "./LoginForm.css";
 // import { error, log } from 'console';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useUser } from "../UserContext";
+import { useUser } from "./UserContext";
 
 interface RegisterFormState {
   username: string;
@@ -134,7 +134,26 @@ const LoginForm: React.FC = () => {
       isRegistering ? initialLoginFormState : initialRegisterFormState
     );
   };
-
+  const handleForgetPassword = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const response = await instance.post("/forget-password", {
+        email: formState.email,
+      });
+      if (response.status === 200) {
+        // Password reset email sent successfully
+        alert("Password reset email sent. Please check your inbox.");
+      } else {
+        // Handle other response statuses if needed
+        alert("An error occurred. Please try again later.");
+      }
+    } catch (error: any) {
+      // Handle error
+      const errorMessage = error.response.data.error;
+      console.log(errorMessage);
+      alert("An error occurred. Please try again later.");
+    }
+  };
   return (
     <div className="container">
       <div className="titleDiv">
@@ -232,7 +251,11 @@ const LoginForm: React.FC = () => {
             </label>
           </div>
           <div>
-            <button className="textOnly" id="passForget">
+            <button
+              className="textOnly"
+              id="passForget"
+              onClick={() => handleForgetPassword}
+            >
               Forgot password?
             </button>
           </div>

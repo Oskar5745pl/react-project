@@ -8,7 +8,7 @@
     justify-content: center;
     border-radius: 30px;
     width: 80vw;
-    padding: 1em 2em;
+    padding: 0.5em 0.5em;
   }
   
   .shadow__input--variant {
@@ -20,12 +20,13 @@
   
   .input__button__shadow--variant {
     border-radius: 15px;
-    width: 69px;
+    width: fit-content;
     height: 40px;
     background-color: #0f7157;
     padding: 10px;
     border: none;
-    margin-right: 7px;
+    display: flex;
+    justify-content: center;
   }
   
   .input__button__shadow--variant:hover {

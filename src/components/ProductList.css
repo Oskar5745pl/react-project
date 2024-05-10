@@ -1,0 +1,76 @@
+.sections a {
+    font-size: 20px;
+}
+.sections h3{
+    color: #CFCFCF;
+    font-size: 14px;
+}
+.sections{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    overflow-x: hidden; /* Ensure no horizontal overflow */
+    height: fit-content;
+    overflow-y: auto; 
+}
+.sections li{
+    color: black;
+    list-style: none;
+}
+.wrapperList{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    overflow-y: scroll; 
+}
+.section{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.sectionPicture{
+    height: 50%;
+    background-color: transparent ;
+    width: 90%;
+    border: #000000 2px solid;
+}
+.sectionContent{
+    height: fit-content;
+    background-color: #1C402E ;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 90%;
+    
+}
+.sectionText{
+   padding: 10px; 
+}
+.sectionButton {
+    background-color: #236645;
+    color: white;
+    width: 90%;
+}
+.sectionButton a{
+    background-color: #236645;
+    color: white;
+    font-size: 15px;
+}
