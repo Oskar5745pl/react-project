@@ -18,6 +18,8 @@ import Payment from "./components/checkout-Steps/Payment.tsx";
 import Confirmation from "./components/checkout-Steps/Confirmation.tsx";
 import OrderReview from "./components/checkout-Steps/OrderReview.tsx";
 import UserOrders from "./components/UserOrders.tsx";
+import ForgetPassword from "./components/ForgetPassword.tsx";
+import ResetPassword from "./components/ResetPassword.tsx";
 function App() {
   return (
     <>
@@ -37,6 +39,11 @@ function App() {
           <Route path="/checkout/confirmation" element={<Confirmation />} />
           <Route path="/orderReview" element={<OrderReview />} />
           <Route path="/userOrders" element={<UserOrders />} />
+          <Route path="/forgetPassword" element={<ForgetPassword />} />
+          <Route
+            path="/reset-password/:resetToken"
+            element={<ResetPassword />}
+          />
         </Routes>
       </div>
     </>

@@ -4,26 +4,7 @@ import { CheckoutStepper } from "../CheckoutStepper";
 import "./Delivery.css";
 import { useStateContext } from "../CheckoutContext";
 import axios from "axios";
-// interface Address {
-//   firstName: string;
-//   lastName: string;
-//   addressLineNo1: string;
-//   addressLineNo2: string;
-//   city: string;
-//   state: string;
-//   country: string;
-//   postcode: string;
-// }
-// const initialAddressInput: Address = {
-//   firstName: "",
-//   lastName: "",
-//   addressLineNo1: "",
-//   addressLineNo2: "",
-//   city: "",
-//   state: "",
-//   country: "",
-//   postcode: "",
-// };
+
 interface StandardCheckout {
   username: string;
   email: string | undefined;
@@ -35,28 +16,8 @@ interface GuestCheckout {
   email: string;
 }
 import { useUser } from "../UserContext";
-// type FormState = StandardCheckout | GuestCheckout;
 
-// const initialGuestCheckout: GuestCheckout = {
-//   email: "",
-// };
-// interface errors {
-//   username: "";
-//   email: "";
-//   password: "";
-//   confirmPassword: "";
-// }
-// const initialStandardCheckout: StandardCheckout = {
-//   username: "",
-//   email: "",
-//   password: "",
-//   confirmPassword: "",
-// };
 export default function Delivery() {
-  // const [address, setAddress] = useState<Address>(initialAddressInput);
-  // const [deliveryType, setDeliveryType] = useState("Free");
-  // const [userForm, setUserForm] = useState<FormState>(initialStandardCheckout);
-  // const [isGuest, setIsGuest] = useState(false);
   const [errors, setErrors] = useState<errors[]>([]);
   const [saveAddress, setSaveAddress] = useState<boolean>();
   const { user, logout } = useUser();
